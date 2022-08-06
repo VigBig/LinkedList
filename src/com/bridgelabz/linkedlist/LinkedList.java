@@ -29,4 +29,16 @@ public class LinkedList<E> {
 
     }
 
+    public void append(E data) {
+
+        Node<E> newNode = new Node<>(data);
+        if(tail== null){
+            head = newNode;
+            tail = newNode;
+        }else {
+            tail.next = newNode;
+            tail = newNode;
+        }
+
+    }
 }
