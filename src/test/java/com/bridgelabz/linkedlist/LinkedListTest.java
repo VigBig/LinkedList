@@ -42,4 +42,33 @@ public class LinkedListTest {
         String actual = linkedList.linkedListAsString();
         assertEquals("56->30->40->70",actual);
     }
+
+    @Test
+    public void testDelete40FromList() {
+
+        LinkedList<Integer> linkedList = new LinkedList<>();
+        linkedList.add(70);
+        linkedList.add(30);
+        linkedList.add(56);
+        linkedList.insert(30,40);
+        linkedList.deleteElement(40);
+
+        String actual = linkedList.linkedListAsString();
+        assertEquals("56->30->70",actual);
+    }
+
+    @Test
+    public void testSizeOfList() {
+
+        LinkedList<Integer> linkedList = new LinkedList<>();
+        linkedList.add(70);
+        linkedList.add(30);
+        linkedList.add(56);
+        linkedList.insert(30,40);
+        linkedList.deleteElement(40);
+
+        int actual = linkedList.size();
+        assertEquals(3,actual);
+    }
+
 }

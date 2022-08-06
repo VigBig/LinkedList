@@ -65,7 +65,6 @@ public class LinkedList<E> {
     public void pop() {
 
         Node<E> temp = head;
-        temp.key = head.key;
         head = head.next;
         temp=null;
 
@@ -136,4 +135,37 @@ public class LinkedList<E> {
 
     }
 
+    public void deleteElement(E deleteKey) {
+
+        Node<E> temp=head;
+        Node<E> beforeTemp = null;
+
+        while(temp!=null){
+
+            if(temp.key==deleteKey){
+
+                beforeTemp.next = temp.next;
+                temp = null;
+                break;
+
+            }
+            beforeTemp = temp;
+            temp=temp.next;
+        }
+
+    }
+
+    public int size() {
+
+        Node<E> temp = head;
+        int counter=0;
+
+        while(temp!=null){
+
+            counter++;
+            temp = temp.next;
+
+        }
+        return counter;
+    }
 }
