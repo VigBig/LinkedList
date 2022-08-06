@@ -63,10 +63,12 @@ public class LinkedList<E> {
 
 
     public void pop() {
+
         Node<E> temp = head;
         temp.key = head.key;
         head = head.next;
         temp=null;
+
     }
 
     public void popLast() {
@@ -112,4 +114,26 @@ public class LinkedList<E> {
         }
         return keyFound;
     }
+
+    public String linkedListAsString(){
+
+        Node<E> temp = head;
+        String linkedlistString = "";
+
+        while(temp!=null){
+
+            linkedlistString = linkedlistString + temp.key.toString();
+            temp = temp.next;
+
+            if(temp != null){
+
+                linkedlistString =  linkedlistString + "->";
+
+            }
+        }
+
+        return linkedlistString;
+
+    }
+
 }
