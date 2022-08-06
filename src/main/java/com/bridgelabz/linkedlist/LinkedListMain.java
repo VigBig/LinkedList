@@ -9,7 +9,7 @@ public class LinkedListMain {
         System.out.println("Welcome to the Linked List Program");
 
         System.out.println("UC1 to UC2: Adding elements 70,30,56 to Linked List :");
-        LinkedList<Integer> linkedList = new LinkedList();
+        LinkedList<Integer> linkedList = new LinkedList<>();
         linkedList.add(70);
         linkedList.add(30);
         linkedList.add(56);
@@ -18,7 +18,7 @@ public class LinkedListMain {
         System.out.println();
 
         System.out.println("UC3: Appending elements 56,30,70 to Linked List :");
-        LinkedList<Integer> linkedList1 = new LinkedList();
+        LinkedList<Integer> linkedList1 = new LinkedList<>();
         linkedList1.append(56);
         linkedList1.append(30);
         linkedList1.append(70);
@@ -66,7 +66,7 @@ public class LinkedListMain {
         System.out.println();
 
         System.out.println("UC7: Searching element 30 from list of element: 56,30,70 ");
-        LinkedList<Integer> linkedList5 = new LinkedList();
+        LinkedList<Integer> linkedList5 = new LinkedList<>();
         linkedList5.add(70);
         linkedList5.add(30);
         linkedList5.add(56);
@@ -124,6 +124,23 @@ public class LinkedListMain {
         linkedList6.display();
         System.out.println();
         System.out.println("UC9: Size of linked list: "+ linkedList6.size());
+        System.out.println();
+
+        System.out.println("UC10: Sorting elements 70,40,30,56 to Linked List :");
+        SortedLinkedList<Integer> sortedLinkedList = new SortedLinkedList<>();
+        sortedLinkedList.add(70);
+        sortedLinkedList.add(40);
+        sortedLinkedList.add(30);
+        sortedLinkedList.add(56);
+        System.out.println("Displaying the list of elements :");
+        sortedLinkedList.display();
+        System.out.println();
+        System.out.println("Sorting the list of elements... ");
+        sortedLinkedList.sorting(sortedLinkedList.size());
+        System.out.println("Displaying the sorted list of elements :");
+        sortedLinkedList.display();
+        System.out.println();
+
 
     }
 

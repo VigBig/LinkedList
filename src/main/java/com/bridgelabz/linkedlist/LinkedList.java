@@ -1,6 +1,6 @@
 package com.bridgelabz.linkedlist;
 
-public class LinkedList<E> {
+public class LinkedList<E extends Comparable<E>>  {
 
     Node<E> head;
     Node<E> tail;
