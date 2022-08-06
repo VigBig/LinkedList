@@ -7,7 +7,7 @@ public class SortedLinkedList<K extends Comparable<K>> extends LinkedList<K>{
         Node<K> temp = head;
         Node<K> beforeTemp = null;
 
-        int passNumber = linkedListSize;
+        int passNumber = linkedListSize-1;
         while(temp!=null && passNumber!=0){
 
             if(beforeTemp!=null){
@@ -19,11 +19,18 @@ public class SortedLinkedList<K extends Comparable<K>> extends LinkedList<K>{
                     temp.key = swapKey;
 
                 }
-                passNumber--;
+
             }
 
             beforeTemp = temp;
             temp = temp.next;
+
+            if(temp == null){
+                passNumber--;
+                beforeTemp = null;
+                temp = head;
+            }
+
         }
 
     }
