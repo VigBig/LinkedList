@@ -1,5 +1,7 @@
 package com.bridgelabz.linkedlist;
 
+import javax.lang.model.element.Element;
+
 public class LinkedListMain {
 
     public static void main(String[] args) {
@@ -61,6 +63,25 @@ public class LinkedListMain {
         System.out.println();
         System.out.println("After deletion: ");
         linkedList4.display();
+        System.out.println();
+
+        System.out.println("Searching element 30 from list of element: 56,30,70 ");
+        LinkedList<Integer> linkedList5 = new LinkedList();
+        linkedList5.add(70);
+        linkedList5.add(30);
+        linkedList5.add(56);
+        System.out.println("Displaying the list of elements :");
+        linkedList5.display();
+        System.out.println();
+        System.out.println("Searching element 30 from list...");
+        boolean keyFound = linkedList5.search(30);
+
+        if(keyFound){
+            System.out.println("Element 30 exists in list");
+        }else{
+            System.out.println("Element 30 doesn't exist in list");
+        }
+
         System.out.println();
 
 

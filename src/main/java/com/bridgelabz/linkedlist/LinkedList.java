@@ -93,10 +93,23 @@ public class LinkedList<E> {
 
         }
 
-
-
     }
 
+    public boolean search(E searchKey) {
 
+        Node<E> temp=head;
+        boolean keyFound = false;
 
+        while(temp!=null){
+
+            if(temp.key==searchKey){
+
+                keyFound = true;
+                break;
+
+            }
+            temp=temp.next;
+        }
+        return keyFound;
+    }
 }
