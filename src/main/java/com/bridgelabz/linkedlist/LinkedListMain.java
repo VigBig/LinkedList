@@ -85,6 +85,19 @@ public class LinkedListMain {
         System.out.println();
 
 
+        System.out.println("Inserting element 40 after 30 into list of elements: 56,30,70");
+        LinkedList<Integer> linkedList6 = new LinkedList<>();
+        linkedList6.add(70);
+        linkedList6.add(30);
+        linkedList6.add(56);
+        System.out.println("Before insertion: ");
+        linkedList6.display();
+        linkedList6.insert(30,40);
+        System.out.println();
+        System.out.println("After insertion: ");
+        linkedList6.display();
+        System.out.println();
+
     }
 
 
