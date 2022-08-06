@@ -5,8 +5,8 @@ public class LinkedList<E> {
     Node<E> head;
     Node<E> tail;
 
-    public void add(E data) {
-        Node<E> newNode = new Node<>(data);
+    public void add(E key) {
+        Node<E> newNode = new Node<>(key);
         if(head == null){
             head = newNode;
             tail = newNode;
@@ -20,7 +20,7 @@ public class LinkedList<E> {
         Node<E> temp = head;
 
         while(temp!=null){
-            System.out.print(temp.data);
+            System.out.print(temp.key);
             temp = temp.next;
             if(temp != null){
                 System.out.print("->");
