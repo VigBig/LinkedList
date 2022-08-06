@@ -5,8 +5,8 @@ public class LinkedList<E> {
     Node<E> head;
     Node<E> tail;
 
-    public void add(E data) {
-        Node<E> newNode = new Node<>(data);
+    public void add(E key) {
+        Node<E> newNode = new Node<>(key);
         if(head == null){
             head = newNode;
             tail = newNode;
@@ -20,7 +20,7 @@ public class LinkedList<E> {
         Node<E> temp = head;
 
         while(temp!=null){
-            System.out.print(temp.data);
+            System.out.print(temp.key);
             temp = temp.next;
             if(temp != null){
                 System.out.print("->");
@@ -29,9 +29,9 @@ public class LinkedList<E> {
 
     }
 
-    public void append(E data) {
+    public void append(E key) {
 
-        Node<E> newNode = new Node<>(data);
+        Node<E> newNode = new Node<>(key);
         if(tail== null){
             head = newNode;
             tail = newNode;
@@ -42,14 +42,14 @@ public class LinkedList<E> {
 
     }
 
-    public void insert(E searchData,E insertData) {
+    public void insert(E searchKey,E insertKey) {
 
-        Node<E> insertNode=new Node<>(insertData);
+        Node<E> insertNode=new Node<>(insertKey);
         Node<E> temp=head;
 
         while(temp!=null){
 
-            if(temp.data==searchData){
+            if(temp.key==searchKey){
 
                   insertNode.next = temp.next;
                   temp.next = insertNode;
