@@ -37,6 +37,19 @@ public class LinkedListMain {
         linkedList2.display();
         System.out.println();
 
+        System.out.println("Deleting first node 56 from list of elements: 56,30,70 ");
+        LinkedList<Integer> linkedList3 = new LinkedList<>();
+        linkedList3.add(70);
+        linkedList3.add(30);
+        linkedList3.add(56);
+        System.out.println("Before deletion: ");
+        linkedList3.display();
+        linkedList3.pop();
+        System.out.println();
+        System.out.println("After deletion: ");
+        linkedList3.display();
+        System.out.println();
+
     }
 
 

@@ -62,4 +62,10 @@ public class LinkedList<E> {
     }
 
 
+    public void pop() {
+        Node<E> temp = head;
+        temp.key = head.key;
+        head = head.next;
+        temp=null;
+    }
 }
