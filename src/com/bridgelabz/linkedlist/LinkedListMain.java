@@ -23,7 +23,22 @@ public class LinkedListMain {
         System.out.println("Displaying the list of elements :");
         linkedList1.display();
         System.out.println();
+
+
+        System.out.println("Inserting 30 between 56 and 70 element into list:");
+        LinkedList<Integer> linkedList2 = new LinkedList<>();
+        linkedList2.add(70);
+        linkedList2.add(56);
+        System.out.println("Before insertion: ");
+        linkedList2.display();
+        linkedList2.insert(56,30);
+        System.out.println();
+        System.out.println("After insertion: ");
+        linkedList2.display();
+        System.out.println();
+
     }
+
 
 
 
