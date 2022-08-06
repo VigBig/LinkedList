@@ -68,4 +68,35 @@ public class LinkedList<E> {
         head = head.next;
         temp=null;
     }
+
+    public void popLast() {
+        Node<E> temp = head;
+        Node<E> beforeTemp = null;
+
+        if (head == tail) {
+
+            head = null;
+            tail = null;
+
+        }else{
+
+            while(temp!=null){
+
+                if(temp == tail){
+
+                    beforeTemp.next = null;
+                    tail = beforeTemp;
+                }
+                beforeTemp = temp;
+                temp = temp.next;
+            }
+
+        }
+
+
+
+    }
+
+
+
 }

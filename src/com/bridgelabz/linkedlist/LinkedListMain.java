@@ -37,7 +37,7 @@ public class LinkedListMain {
         linkedList2.display();
         System.out.println();
 
-        System.out.println("Deleting first node 56 from list of elements: 56,30,70 ");
+        System.out.println("Deleting first element 56 from list of elements: 56,30,70 ");
         LinkedList<Integer> linkedList3 = new LinkedList<>();
         linkedList3.add(70);
         linkedList3.add(30);
@@ -49,6 +49,20 @@ public class LinkedListMain {
         System.out.println("After deletion: ");
         linkedList3.display();
         System.out.println();
+
+        System.out.println("Deleting last element 70 from list of elements: 56,30,70 ");
+        LinkedList<Integer> linkedList4 = new LinkedList<>();
+        linkedList4.add(70);
+        linkedList4.add(30);
+        linkedList4.add(56);
+        System.out.println("Before deletion: ");
+        linkedList4.display();
+        linkedList4.popLast();
+        System.out.println();
+        System.out.println("After deletion: ");
+        linkedList4.display();
+        System.out.println();
+
 
     }
 
